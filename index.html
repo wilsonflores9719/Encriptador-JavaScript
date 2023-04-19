@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Contenedor de la Izquierda -->
+        <div class="contIzquierda">
+            <div class="logo">
+                <img src="img/Vector.png" alt="Logo" class="logoImg">
+            </div>
+            <div class="ContEncriptador">
+                <textarea name="TxtEncriptado" class="TxtEncriptado" id="TxtEncriptado" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="botonera">
+                <div class="informacion">
+                    <span><i class="icofont-info-circle"></i></span>
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button type="submit" class="btnEncriptar" id="btnEncriptar" onclick="Encriptar()">Encriptar</button>
+                    <button type="submit" class="btnDesencriptar" id="btnDesencriptar" onclick="Desencriptar()">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Fin -->
+
+
+        <!-- Contenedor de la derecha -->
+        <div class="contDerecha">
+            <div class="imagen-search">
+                <img src="img/Muñeco.png" alt="img" id="imgFondo">
+            </div>
+            <div class="infoEncriptado">
+                <h4 id="h4">Ningún mensaje fue encontrado</h4>
+                <textarea id="resultadoEncriptado" cols="10" 
+                placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
+            </div>
+            <div class="btnCopy">
+                <button type="submit" class="btnCopiar" id="btnCopiar" onclick="copiar()">Copiar!</button>
+            </div>
+        </div>
+        <!-- Fin -->
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

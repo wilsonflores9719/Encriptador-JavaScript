@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+/*Contenedor Padre*/
+.container{
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+
+    /*Media Queries para que sea responsive en dispositivos moviles*/
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit(minmax(360px, 1fr)));
+}
+
+/*Media Queries para que el grid sea de 2fr y 1 fr en pantallas grandes*/
+@media (min-width: 900px) {
+    .container { 
+        grid-template-columns: 2fr 1fr; 
+    }
+}
+
+
+/*Contenedor derecho (Imagen)*/
+.contDerecha{
+    border-radius: 2em;
+    background-color: white;
+    padding: 1em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 10px 22px 25px 0px rgba(0,0,0,0.34);
+
+}
+
+/*Imagen responsiva*/
+.contDerecha .imagen-search img{
+    border-radius: 1em;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .contDerecha{
+        margin: 2em 0;
+    }
+    .contDerecha .imagen-search img { 
+        display: block; 
+    }
+}
+
+/*Cajas de texto y Boton Copiar*/
+.contDerecha .infoEncriptado h4{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.contDerecha .infoEncriptado textarea{
+    width: 100%;
+    text-align: center;
+    border: none;
+    resize: none;
+    margin-top: 1em;
+}
+
+.contDerecha .infoEncriptado textarea:focus{
+    outline: none;
+}
+
+.contDerecha .btnCopy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.contDerecha .btnCopy .btnCopiar{
+    width: 17.4em;
+    height: 4.2em;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    border-radius: 1.5em;
+    display: none;
+}
+
+.contDerecha .btnCopy .btnCopiar:hover{
+    cursor: pointer;
+}
+
+
+/*Estilos del contenedor derecho*/
+.contIzquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 1em;
+}
+
+/*Estilos img responsive*/
+.contIzquierda .logo .logoImg{
+    width: 2em;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+/*Estilos Caja de texto*/
+.contIzquierda .ContEncriptador .TxtEncriptado{
+    width: 100%;
+    background-color: #E5E5E5;
+    border: none;
+    color: #0A3871;
+    font-size: 2em;
+    resize: none;
+}
+
+.contIzquierda .ContEncriptador .TxtEncriptado:focus{
+    outline: none;
+}
+
+.contIzquierda .ContEncriptador .TxtEncriptado::placeholder{
+    color: #0A3871;
+}
+
+/*Estilos Botones*/
+.botonera .informacion{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    color: #0A3871;
+    font-size: 1.2em;
+}
+
+.botonera .informacion span{
+    margin-right: 1em;
+}
+
+.botonera .informacion p{
+    text-align: center;
+}
+
+.botonera .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.botonera .botones .btnEncriptar{
+    width: 20.5em;
+    
+    background-color: #0A3871;
+    color: white;
+    border-radius: 1.5em;
+    padding: 1.5em;
+    gap: .5em;
+}
+
+.botonera .botones .btnDesencriptar{
+    width: 20.5em;
+    
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-radius: 1.5em;
+    padding: 1.5em;
+    gap: .5em;
+}
